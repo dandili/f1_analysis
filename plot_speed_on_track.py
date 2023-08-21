@@ -76,6 +76,7 @@ line = ax.add_collection(lc)
 cbaxes = fig.add_axes([0.25, 0.05, 0.5, 0.05])
 normlegend = mpl.colors.Normalize(vmin=color.min(), vmax=color.max())
 legend = mpl.colorbar.ColorbarBase(cbaxes, norm=normlegend, cmap=colormap, orientation="horizontal")
+legend.ax.set_xlabel('Speed (km/h)')
 
 
 # Show the plot
