@@ -4,20 +4,22 @@
 (Example provided by @JSEHV on Github)
 """
 import fastf1 as ff1
+import fastf1.plotting
 import numpy as np
 import matplotlib as mpl
 
 from matplotlib import pyplot as plt
 from matplotlib.collections import LineCollection
 
+fastf1.plotting.setup_mpl(misc_mpl_mods=False)
 
 ##############################################################################
 # First, we define some variables that allow us to conveniently control what
 # we want to plot.
-year = 2021
-wknd = 9
-ses = 'R'
-driver = 'RIC'
+year = 2022
+wknd = "Dutch"
+ses = 'Q'
+driver = 'VER'
 colormap = mpl.cm.plasma
 
 
@@ -48,7 +50,7 @@ segments = np.concatenate([points[:-1], points[1:]], axis=1)
 
 # We create a plot with title and adjust some setting to make it look good.
 fig, ax = plt.subplots(sharex=True, sharey=True, figsize=(12, 6.75))
-fig.suptitle(f'{weekend.name} {year} - {driver} - Speed', size=24, y=0.97)
+fig.suptitle(f'{wknd} {year} - {driver} - Speed', size=24, y=0.97)
 
 # Adjust margins and turn of axis
 plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.12)

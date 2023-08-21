@@ -57,6 +57,8 @@ plt.suptitle(f"Fastest Lap Comparison \n "
 ax[0].plot(driver1_tel['Distance'], driver1_tel['Speed'], color=driver1_color, label=driver1_lap['Driver'])
 ax[0].plot(driver2_tel['Distance'], driver2_tel['Speed'], color=driver2_color, label=driver2_lap['Driver'])
 ax[0].set_ylabel('Speed in km/h')
+ax[0].yaxis.grid(which='major', color='gray', linewidth=0.3)
+ax[0].minorticks_on()
 ax[0].legend()
 
 # Plotting throttle data
@@ -83,8 +85,12 @@ ax[4].fill_between(common_distance, time_delta, where=time_delta>=0, color=drive
 ax[4].fill_between(common_distance, time_delta, where=time_delta<0, color=driver2_color, label=f"{driver2_lap['Driver']} Ahead", interpolate=True)
 ax[4].set_ylabel('Time Delta (s)')
 ax[4].legend()
-ax[4].axhline(0, color='gray', linestyle='--', linewidth=0.5)  # Line at zero for reference
+ax[4].axhline(0, color='white', linestyle='--', linewidth=0.5)  # Line at zero for reference
+ax[4].yaxis.grid(which='major', color='gray', linewidth=0.3)
+ax[4].yaxis.grid(which='minor', color='gray', linestyle=':', linewidth=0.1)
+ax[4].minorticks_on()
 
+plt.tight_layout()
 plt.show()
 
 fig2, ax = plt.subplots(sharex=True, sharey=True, figsize=(12, 6.75))
@@ -117,5 +123,6 @@ line = ax_speed.add_collection(lc)
 cbaxes = fig.add_axes([0.25, 0.05, 0.5, 0.05])
 normlegend = mpl.colors.Normalize(vmin=color.min(), vmax=color.max())
 legend = mpl.colorbar.ColorbarBase(cbaxes, norm=normlegend, cmap=colormap, orientation="horizontal")
+plt.tight_layout()
 
 plt.show()
