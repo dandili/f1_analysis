@@ -27,13 +27,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
 ```
-git clone https://github.com/your_github_username/f1_telemetry_toolkit.git
+git clone https://github.com/your_github_username/f1_analysis.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd f1_telemetry_toolkit
+cd f1_analysis
 ```
 
 3. Install the required Python libraries:
