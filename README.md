@@ -3,7 +3,7 @@
 
 Analyze and visualize telemetry data from Formula 1 races using Python.
 
-![Telemetry Visualization Sample](https://github.com/dandili/f1_analysis/blob/master/images/2022%20Dutch%20GP%20-%20Verstappen%20Fastest%20Lap.png?raw=true)  
+![Telemetry Visualization Sample]([https://github.com/dandili/f1_analysis/blob/master/images/2022%20Dutch%20GP%20-%20Verstappen%20Fastest%20Lap.png?raw=true](https://raw.githubusercontent.com/dandili/f1_analysis/master/images/2022%20Dutch%20Grand%20Prix%20-%20Fastest%20Qualifying%20Laps%20-%20Verstappen%20vs%20Leclerc.png?token=GHSAT0AAAAAACGR3KZZGK5JKE36CH4AW5T2ZHDOVPA))  
 
 ## Features
 
