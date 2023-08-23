@@ -50,5 +50,5 @@ class SprintImpactAnalysis(RaceData):
 
 
 if __name__ == "__main__":
-    analyzer = SprintImpactAnalysis('/kaggle-archive/sprint_results.csv', '/kaggle-archive/results.csv', 'kaggle-archive/drivers.csv')
+    analyzer = SprintImpactAnalysis('kaggle-archive/sprint_results.csv', 'kaggle-archive/results.csv', 'kaggle-archive/drivers.csv')
     analyzer.analyze_position_change()
