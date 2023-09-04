@@ -10,11 +10,11 @@ import numpy as np
 fastf1.plotting.setup_mpl(misc_mpl_mods=False)
 
 # Load a session and its telemetry data
-session = fastf1.get_session(2022, 'Dutch', 'Q')
+session = fastf1.get_session(2023, 'Italian', 'q')
 session.load()
 
 driver1 = "VER"
-driver2 = "LEC"
+driver2 = "SAI"
 
 driver1_lap = session.laps.pick_driver(driver1).pick_fastest()
 driver2_lap = session.laps.pick_driver(driver2).pick_fastest()

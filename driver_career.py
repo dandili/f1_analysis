@@ -55,7 +55,7 @@ for bar, (team, pos) in zip(bars,
 verstappen_qualifying = qualifying[qualifying['driverId'] == verstappen_id]
 pole_races_verstappen = verstappen_qualifying[verstappen_qualifying['position'] == 1]['raceId']
 pole_positions_theta = theta[filtered_verstappen_results['raceId'].isin(pole_races_verstappen)]
-ax.scatter(pole_positions_theta, 19.5 * np.ones_like(pole_positions_theta), color='gold', marker='*', s=150, zorder=5)
+ax.scatter(pole_positions_theta, 19.5 * np.ones_like(pole_positions_theta), color='blue', marker='*', s=150, zorder=5)
 
 # Enhancing labels, title, and other aesthetics
 ax.set_title("Max Verstappen's Race Finish Positions (Radial View)", va='bottom', fontsize=22, pad=20)
@@ -67,7 +67,7 @@ ax.set_yticklabels(
     ['20th', '19th', '18th', '17th', '16th', '15th', '14th', '13th', '12th', '11th', '10th', '9th', '8th', '7th', '6th',
      '5th', '4th', '3rd', '2nd', '1st'], fontsize=10)
 ax.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.6)
-ax.legend(handles=team_patches + [plt.Line2D([0], [0], color='gold', marker='*', linestyle='', label='Pole Position')],
+ax.legend(handles=team_patches + [plt.Line2D([0], [0], color='blue', marker='*', linestyle='', label='P1')],
           loc=(0.85, 0.85), fontsize=12)
 ax.set_xticks([])  # Remove the outer degrees axis
 
